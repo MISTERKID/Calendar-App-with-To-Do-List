@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendar App with To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calendar-container">
+    <!-- Header Section -->
+    <div class="header">
+      <h1>My Calendar</h1>
+      <div class="header-buttons">
+        <!-- View All To-Dos Button -->
+        <button id="viewAllTodos" class="view-all-todos">View All To-Dos</button>
+        <!-- Dark Mode Toggle Button -->
+        <button id="toggleDarkMode" class="toggle-dark-mode"></button>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+      <button id="prevMonth">← Prev</button>
+      <span id="monthYear"></span>
+      <button id="nextMonth">Next →</button>
+    </div>
+    <div id="calendar"></div>
+  </div>
+
+  <!-- To-Do Modal -->
+  <div id="todoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add To-Do for <span id="selectedDate"></span></h2>
+      <input type="text" id="todoInput" placeholder="Enter your to-do">
+      <button id="addTodoBtn">Add</button>
+      <ul id="todoList"></ul>
+      <!-- Clear All Button at the Bottom -->
+      <button id="clearTodosBtn" class="clear-all">Clear All</button>
+    </div>
+  </div>
+
+  <!-- Reminder Modal -->
+  <div id="reminderModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Today's To-Dos</h2>
+      <ul id="todayTodoList"></ul>
+    </div>
+  </div>
+
+  <!-- View All To-Dos Modal -->
+  <div id="allTodosModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>All To-Dos</h2>
+      <ul id="allTodoList"></ul>
+      <!-- Clear All Button at the Bottom -->
+      <button id="clearAllTodosBtn" class="clear-all">Clear All To-Dos</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
